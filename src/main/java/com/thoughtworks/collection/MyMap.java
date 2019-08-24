@@ -1,9 +1,13 @@
 package com.thoughtworks.collection;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+
+import com.sun.org.apache.regexp.internal.recompile;
 
 public class MyMap {
 
@@ -14,10 +18,23 @@ public class MyMap {
     }
 
     public List<Integer> sortFromBig() {
-        throw new NotImplementedException();
+//    	List<Integer> list=new ArrayList<Integer>();
+//    	for(int i=0;i<array.size()-1;i++) {
+//    		for(int j=0;j<array.size()-i-1;j++) {
+//    			if(array.get(j)<array.get(j+1)) {
+//    				int temp1=array.get(j+1);
+//    				int temp2=array.get(j);
+//    			}
+//    		}
+//    	}
+    	Collections.reverse(array);
+    	return array;
+
     }
 
     public List<Integer> sortFromSmall() {
-        throw new NotImplementedException();
+    	Collections.sort(array);
+    	return array;
+        
     }
 }
